@@ -42,6 +42,7 @@
 		<link rel="apple-touch-startup-image" media="screen and (device-width: 932px) and (device-height: 430px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="images/super_splash_screens/icon_2796x1290.png">
 		<link rel="apple-touch-startup-image" media="screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="images/super_splash_screens/icon_1290x2796.png">
 		<!-- / SuperPWA.com -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/2.10.0/barba.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="max-image-preview:large">
 <title>Cadastro Mmabet – Dark Bet</title>
@@ -141,7 +142,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 								<div class="elementor-element elementor-element-c9e88f2 elementor-widget elementor-widget-html" data-id="c9e88f2" data-element_type="widget" data-widget_type="html.default">
 				<div class="elementor-widget-container">
 			<style>
+				
+			<div class="barba-container">
 
+				
 	.divGanhadores{
 		width: 100%;
 		overflow: hidden;
@@ -288,6 +292,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					<div class="elementor-spacer">
 			<div class="elementor-spacer-inner"></div>
 		</div>
+					<div>
 				</div>
 				</div>
 					</div>
@@ -366,6 +371,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		// Inject the skip link.
 		sibling.parentElement.insertBefore( skipLink, sibling );
 	}() );
+			<script src="https://cdn.jsdelivr.net/npm/@barba/core@2.10.0/dist/barba.min.js"></script>
+<script>
+  Barba.Pjax.start();
+
+  var FadeTransition = Barba.BaseTransition.extend({
+    start: function() {
+      Promise.all([this.newContainerLoading, this.fadeOut()]).then(this.fadeIn.bind(this));
+    },
+    fadeOut: function() {
+      return new Promise(resolve => {
+        this.oldContainer.classList.add("fade-out");
+        setTimeout(() => {
+          resolve();
+        }, 300);
+      });
+    },
+    fadeIn: function() {
+      this.newContainer.classList.add("fade-in");
+      this.oldContainer.classList.remove("fade-out");
+      window.scrollTo(0, 0);
+      this.done();
+    }
+  });
+
+  Barba.Pjax.getTransition = function() {
+    return FadeTransition;
+  };
+</script>
+
 	</script>
 	<link rel="stylesheet" id="e-animations-css" href="css/animations.min.css" media="all">
 <script id="superpwa-register-sw-js-extra">
