@@ -6,7 +6,6 @@
 <head>
 	<meta charset="UTF-8">
 			<title>Home &#8211; Dark Bet</title>
-	  <script src="https://cdn.jsdelivr.net/npm/@barba/core@2.10.0/dist/barba.min.js"></script>
 		<!-- Manifest added by SuperPWA - Progressive Web Apps Plugin For WordPress -->
 <link rel="manifest" href="../superpwa-manifest.json">
 <link rel="prefetch" href="../superpwa-manifest.json">
@@ -649,34 +648,6 @@ var superpwa_ptr_obj = {"instrPullToRefresh":"Puxe para atualizar","instrRelease
 <script src='../wp-includes/js/dist/i18n.minf92f.js?ver=7701b0c3857f914212ef' id='wp-i18n-js'></script>
 <script id="wp-i18n-js-after">
 wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
-</script>
-	<script src="https://cdn.jsdelivr.net/npm/@barba/core@2.10.0/dist/barba.min.js"></script>
-<script>
-  Barba.Pjax.start();
-
-  var FadeTransition = Barba.BaseTransition.extend({
-    start: function() {
-      Promise.all([this.newContainerLoading, this.fadeOut()]).then(this.fadeIn.bind(this));
-    },
-    fadeOut: function() {
-      return new Promise(resolve => {
-        this.oldContainer.classList.add("fade-out");
-        setTimeout(() => {
-          resolve();
-        }, 300);
-      });
-    },
-    fadeIn: function() {
-      this.newContainer.classList.add("fade-in");
-      this.oldContainer.classList.remove("fade-out");
-      window.scrollTo(0, 0);
-      this.done();
-    }
-  });
-
-  Barba.Pjax.getTransition = function() {
-    return FadeTransition;
-  };
 </script>
 <script id="elementor-pro-frontend-js-before">
 var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/darksbet.com\/wp-admin\/admin-ajax.php","nonce":"4623725023","urls":{"assets":"https:\/\/darksbet.com\/wp-content\/plugins\/pro-elements\/assets\/","rest":"https:\/\/darksbet.com\/wp-json\/"},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"pt_PT","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/darksbet.com\/wp-content\/plugins\/pro-elements\/modules\/lottie\/assets\/animations\/default.json"}};
