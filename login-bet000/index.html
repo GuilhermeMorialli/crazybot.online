@@ -373,38 +373,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		sibling.parentElement.insertBefore( skipLink, sibling );
 	}() );
 	</script>
+	<script src="https://cdn.jsdelivr.net/npm/@barba/core@2.10.0/dist/barba.min.js"></script>
 	<script>
-  Barba.Pjax.init();
+	  Barba.Pjax.start();
 
-  var fadeTransition = Barba.BaseTransition.extend({
-    start: function() {
-      Promise.all([this.newContainerLoading, this.fadeOut()]).then(this.fadeIn.bind(this));
-    },
+	  var FadeTransition = Barba.BaseTransition.extend({
+	    start: function() {
+	      Promise.all([this.newContainerLoading, this.fadeOut()]).then(this.fadeIn.bind(this));
+	    },
+	    fadeOut: function() {
+	      return new Promise(resolve => {
+	        this.oldContainer.classList.add("fade-out");
+	        setTimeout(() => {
+	          resolve();
+	        }, 300);
+	      });
+	    },
+	    fadeIn: function() {
+	      this.newContainer.classList.add("fade-in");
+	      this.oldContainer.classList.remove("fade-out");
+	      window.scrollTo(0, 0);
+	      this.done();
+	    }
+	  });
 
-    fadeOut: function() {
-      return new Promise((resolve) => {
-        this.oldContainer.style.opacity = 0;
-        setTimeout(resolve, 300); // Tempo para a animação de fade out
-      });
-    },
-
-    fadeIn: function() {
-      this.newContainer.style.visibility = 'visible';
-      this.newContainer.style.opacity = 0;
-
-      // Importante: Forçar o scroll ao topo da nova página
-      window.scrollTo(0, 0);
-
-      setTimeout(() => {
-        this.newContainer.style.opacity = 1;
-        this.done();
-      }, 300); // Tempo para a animação de fade in
-    }
-  });
-
-  Barba.Pjax.getTransition = function() {
-    return fadeTransition;
-  };
+	  Barba.Pjax.getTransition = function() {
+	    return FadeTransition;
+	  };
+	</script>
 </script>
 	<link rel="stylesheet" id="e-animations-css" href="css/animations.min.css" media="all">
 <script id="superpwa-register-sw-js-extra">
