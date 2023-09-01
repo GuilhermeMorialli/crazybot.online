@@ -1,0 +1,33 @@
+{
+  "name": "Crazy Hacker",
+  "short_name": "Crazy Hacker",
+  "description": "Crazy Hacker",
+  "icons": [
+    {"src": "wp-content/uploads/2023/05/logodarkbet00.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "wp-content/uploads/2023/05/logodarkbet00.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable"},
+    {"src": "wp-content/uploads/2023/05/logodarkbet00.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "wp-content/uploads/2023/05/logodarkbet00.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"},
+    {"src": "wp-content/uploads/2023/05/logodarkbet00.png", "sizes": "512x512", "type": "image/png", "purpose": "monochrome"}
+  ],
+  "screenshots": [
+    {"src": "wp-content/uploads/2023/05/logodarkbet00.png", "type": "image/png"}
+  ],
+  "background_color": "#0a0808",
+  "theme_color": "#0a0808",
+  "display": "standalone",
+  "dir": "ltr",
+  "orientation": "portrait",
+  "start_url": "/",
+  "categories": ["entertainment"],
+  "scope": "/",
+  "shortcuts": [
+    {
+      "name": "Crazy Hacker",
+      "url": "/freelogin/",
+      "description": "Crazy Hacker",
+      "icons": [
+        {"src": "wp-content/uploads/2023/05/logodarkbet00.png", "sizes": "192x192"}
+      ]
+    }
+  ]
+}
